@@ -4,7 +4,7 @@
 
 <h1 align="center">0xzunid.muse.ai</h1>
 
-<p align="center"><strong>0xzunid.muse — zunid + muse, build - zero real money, legit #airdrops, tokens, name service - soulbound NFTs on ARC, RobinHood, LitVM, EVM, mainnet-testnet.</strong></p>
+<p align="center"><strong>0xzunid.muse — zunid + muse, build - zero real money, legit airdrops, tokens, name service - soulbound NFTs on ARC, RobinHood, LitVM, EVM, mainnet-testnet.</strong></p>
 
 <p align="center">
   <a href="https://muse.ai/s/0xzunid-muse-ai-xkm6xkxttxbpwmxe/c3ch1wB7BD8vm46y7rIvWc2GrvMsBF1H20DVuXBBS1w">Project site</a> •
