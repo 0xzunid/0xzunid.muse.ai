@@ -1,0 +1,33 @@
+# Publish @0xzunid/0xzunid-muse to GitHub Packages on every release.
+# Place this file at .github/workflows/publish.yml in the repo
+# (0xzunid/0xzunid.muse.ai) — it is NOT part of the published package.
+# Create a GitHub release to trigger it; the release tag should match
+# the version in name-service/package/package.json (e.g. v1.0.0).
+
+name: Publish package
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: name-service/package
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com
+          scope: '@0xzunid'
+      - run: npm install
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
