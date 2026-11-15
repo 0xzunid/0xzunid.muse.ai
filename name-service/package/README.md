@@ -1,6 +1,6 @@
 # @0xzunid/0xzunid-muse
 
-Addresses, ABIs and chain config for the **0xzunid muse** testnet project —
+Addresses, ABIs and chain config for the **0xzunid.muse** testnet project —
 Zunid + Muse. Testnet only, zero real money.
 
 - **ERC-20 tokens** — ZND / BZND (ARC), RZND / BRZND (Robinhood Chain),
