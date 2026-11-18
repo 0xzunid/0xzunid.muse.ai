@@ -1,0 +1,13 @@
+[Unit]
+Description=Bitcoin puzzle lottery hunter (0xzunid.muse)
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/hatch/workspace/bitcoin-puzzle-hunter/hunter --dir /home/hatch/workspace/bitcoin-puzzle-hunter
+Restart=always
+RestartSec=10
+CPUAffinity=0
+
+[Install]
+WantedBy=multi-user.target

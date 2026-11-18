@@ -1,0 +1,626 @@
+[
+ {
+  "bits": 71,
+  "range_min": "400000000000000000",
+  "range_max": "7fffffffffffffffff",
+  "address": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+  "hash160": "f6f5431d25bbf7b12e8add9af5e3475c44a0a5b8",
+  "btc": 7.1
+ },
+ {
+  "bits": 72,
+  "range_min": "800000000000000000",
+  "range_max": "ffffffffffffffffff",
+  "address": "1JTK7s9YVYywfm5XUH7RNhHJH1LshCaRFR",
+  "hash160": "bf7413e8df4e7a34ce9dc13e2f2648783ec54adb",
+  "btc": 7.2
+ },
+ {
+  "bits": 73,
+  "range_min": "1000000000000000000",
+  "range_max": "1ffffffffffffffffff",
+  "address": "12VVRNPi4SJqUTsp6FmqDqY5sGosDtysn4",
+  "hash160": "105b7f253f0ebd7843adaebbd805c944bfb863e4",
+  "btc": 7.3
+ },
+ {
+  "bits": 74,
+  "range_min": "2000000000000000000",
+  "range_max": "3ffffffffffffffffff",
+  "address": "1FWGcVDK3JGzCC3WtkYetULPszMaK2Jksv",
+  "hash160": "9f1adb20baeacc38b3f49f3df6906a0e48f2df3d",
+  "btc": 7.4
+ },
+ {
+  "bits": 76,
+  "range_min": "8000000000000000000",
+  "range_max": "fffffffffffffffffff",
+  "address": "1DJh2eHFYQfACPmrvpyWc8MSTYKh7w9eRF",
+  "hash160": "86f9fea5cdecf033161dd2f8f8560768ae0a6d14",
+  "btc": 7.6
+ },
+ {
+  "bits": 77,
+  "range_min": "10000000000000000000",
+  "range_max": "1fffffffffffffffffff",
+  "address": "1Bxk4CQdqL9p22JEtDfdXMsng1XacifUtE",
+  "hash160": "783c138ac81f6a52398564bb17455576e8525b29",
+  "btc": 7.7
+ },
+ {
+  "bits": 78,
+  "range_min": "20000000000000000000",
+  "range_max": "3fffffffffffffffffff",
+  "address": "15qF6X51huDjqTmF9BJgxXdt1xcj46Jmhb",
+  "hash160": "35003c3ef8759c92092f8488fca59a042859018c",
+  "btc": 7.8
+ },
+ {
+  "bits": 79,
+  "range_min": "40000000000000000000",
+  "range_max": "7fffffffffffffffffff",
+  "address": "1ARk8HWJMn8js8tQmGUJeQHjSE7KRkn2t8",
+  "hash160": "67671d5490c272e3ab7ddd34030d587738df33da",
+  "btc": 7.9
+ },
+ {
+  "bits": 81,
+  "range_min": "100000000000000000000",
+  "range_max": "1ffffffffffffffffffff",
+  "address": "15qsCm78whspNQFydGJQk5rexzxTQopnHZ",
+  "hash160": "351e605fac813965951ba433b7c2956bf8ad95ce",
+  "btc": 8.1
+ },
+ {
+  "bits": 82,
+  "range_min": "200000000000000000000",
+  "range_max": "3ffffffffffffffffffff",
+  "address": "13zYrYhhJxp6Ui1VV7pqa5WDhNWM45ARAC",
+  "hash160": "20d28d4e87543947c7e4913bcdceaa16e2f8f061",
+  "btc": 8.2
+ },
+ {
+  "bits": 83,
+  "range_min": "400000000000000000000",
+  "range_max": "7ffffffffffffffffffff",
+  "address": "14MdEb4eFcT3MVG5sPFG4jGLuHJSnt1Dk2",
+  "hash160": "24cef184714bbd030833904f5265c9c3e12a95a2",
+  "btc": 8.3
+ },
+ {
+  "bits": 84,
+  "range_min": "800000000000000000000",
+  "range_max": "fffffffffffffffffffff",
+  "address": "1CMq3SvFcVEcpLMuuH8PUcNiqsK1oicG2D",
+  "hash160": "7c99ce73e19f9fbfcce4825ae88261e2b0b0b040",
+  "btc": 8.4
+ },
+ {
+  "bits": 86,
+  "range_min": "2000000000000000000000",
+  "range_max": "3fffffffffffffffffffff",
+  "address": "1K3x5L6G57Y494fDqBfrojD28UJv4s5JcK",
+  "hash160": "c60111ed3d63b49665747b0e31eb382da5193535",
+  "btc": 8.6
+ },
+ {
+  "bits": 87,
+  "range_min": "4000000000000000000000",
+  "range_max": "7fffffffffffffffffffff",
+  "address": "1PxH3K1Shdjb7gSEoTX7UPDZ6SH4qGPrvq",
+  "hash160": "fbc708d671c03e26661b9c08f77598a529858b5e",
+  "btc": 8.7
+ },
+ {
+  "bits": 88,
+  "range_min": "8000000000000000000000",
+  "range_max": "ffffffffffffffffffffff",
+  "address": "16AbnZjZZipwHMkYKBSfswGWKDmXHjEpSf",
+  "hash160": "38a968fdfb457654c51bcfc4f9174d6ee487bb41",
+  "btc": 8.8
+ },
+ {
+  "bits": 89,
+  "range_min": "10000000000000000000000",
+  "range_max": "1ffffffffffffffffffffff",
+  "address": "19QciEHbGVNY4hrhfKXmcBBCrJSBZ6TaVt",
+  "hash160": "5c3862203d1e44ab3af441503e22db97b1c5097e",
+  "btc": 8.9
+ },
+ {
+  "bits": 91,
+  "range_min": "40000000000000000000000",
+  "range_max": "7ffffffffffffffffffffff",
+  "address": "1EzVHtmbN4fs4MiNk3ppEnKKhsmXYJ4s74",
+  "hash160": "9978f61b92d16c5f1a463a0995df70da1f7a7d2a",
+  "btc": 9.1
+ },
+ {
+  "bits": 92,
+  "range_min": "80000000000000000000000",
+  "range_max": "fffffffffffffffffffffff",
+  "address": "1AE8NzzgKE7Yhz7BWtAcAAxiFMbPo82NB5",
+  "hash160": "6534b31208fe6e100d29f9c9c75aac8bf06fbb38",
+  "btc": 9.2
+ },
+ {
+  "bits": 93,
+  "range_min": "100000000000000000000000",
+  "range_max": "1fffffffffffffffffffffff",
+  "address": "17Q7tuG2JwFFU9rXVj3uZqRtioH3mx2Jad",
+  "hash160": "463013cd41279f2fd0c31d0a16db3972bfffac8d",
+  "btc": 9.3
+ },
+ {
+  "bits": 94,
+  "range_min": "200000000000000000000000",
+  "range_max": "3fffffffffffffffffffffff",
+  "address": "1K6xGMUbs6ZTXBnhw1pippqwK6wjBWtNpL",
+  "hash160": "c6927a00970d0165327d0a6db7950f05720c295c",
+  "btc": 9.4
+ },
+ {
+  "bits": 96,
+  "range_min": "800000000000000000000000",
+  "range_max": "ffffffffffffffffffffffff",
+  "address": "15ANYzzCp5BFHcCnVFzXqyibpzgPLWaD8b",
+  "hash160": "2da63cbd251d23c7b633cb287c09e6cf888b3fe4",
+  "btc": 9.6
+ },
+ {
+  "bits": 97,
+  "range_min": "1000000000000000000000000",
+  "range_max": "1ffffffffffffffffffffffff",
+  "address": "18ywPwj39nGjqBrQJSzZVq2izR12MDpDr8",
+  "hash160": "578d94dc6f40fff35f91f6fba9b71c46b361dff2",
+  "btc": 9.7
+ },
+ {
+  "bits": 98,
+  "range_min": "2000000000000000000000000",
+  "range_max": "3ffffffffffffffffffffffff",
+  "address": "1CaBVPrwUxbQYYswu32w7Mj4HR4maNoJSX",
+  "hash160": "7eefddd979a1d6bb6f29757a1f463579770ba566",
+  "btc": 9.8
+ },
+ {
+  "bits": 99,
+  "range_min": "4000000000000000000000000",
+  "range_max": "7ffffffffffffffffffffffff",
+  "address": "1JWnE6p6UN7ZJBN7TtcbNDoRcjFtuDWoNL",
+  "hash160": "c01bf430a97cbcdaedddba87ef4ea21c456cebdb",
+  "btc": 9.9
+ },
+ {
+  "bits": 101,
+  "range_min": "10000000000000000000000000",
+  "range_max": "1fffffffffffffffffffffffff",
+  "address": "1CKCVdbDJasYmhswB6HKZHEAnNaDpK7W4n",
+  "hash160": "7c1a77205c03b9909663b2034faa0b544e6bc96b",
+  "btc": 10.1
+ },
+ {
+  "bits": 102,
+  "range_min": "20000000000000000000000000",
+  "range_max": "3fffffffffffffffffffffffff",
+  "address": "1PXv28YxmYMaB8zxrKeZBW8dt2HK7RkRPX",
+  "hash160": "f72b812932f6d7102233971d65cec0a22b89e136",
+  "btc": 10.2
+ },
+ {
+  "bits": 103,
+  "range_min": "40000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffff",
+  "address": "1AcAmB6jmtU6AiEcXkmiNE9TNVPsj9DULf",
+  "hash160": "695fd6dcf33f47166b25de968b2932b351b0afc4",
+  "btc": 10.3
+ },
+ {
+  "bits": 104,
+  "range_min": "80000000000000000000000000",
+  "range_max": "ffffffffffffffffffffffffff",
+  "address": "1EQJvpsmhazYCcKX5Au6AZmZKRnzarMVZu",
+  "hash160": "93022af9a38f3ebb0c3f15dd1c83f8fadaf64e74",
+  "btc": 10.4
+ },
+ {
+  "bits": 106,
+  "range_min": "200000000000000000000000000",
+  "range_max": "3ffffffffffffffffffffffffff",
+  "address": "18KsfuHuzQaBTNLASyj15hy4LuqPUo1FNB",
+  "hash160": "505aaa63a5e209dfb90cee683a8e227a8c278e47",
+  "btc": 10.6
+ },
+ {
+  "bits": 107,
+  "range_min": "400000000000000000000000000",
+  "range_max": "7ffffffffffffffffffffffffff",
+  "address": "15EJFC5ZTs9nhsdvSUeBXjLAuYq3SWaxTc",
+  "hash160": "2e644e46b042ffa86da35c54d7275f1abe6d4911",
+  "btc": 10.7
+ },
+ {
+  "bits": 108,
+  "range_min": "800000000000000000000000000",
+  "range_max": "fffffffffffffffffffffffffff",
+  "address": "1HB1iKUqeffnVsvQsbpC6dNi1XKbyNuqao",
+  "hash160": "b166c44f12c7fc565f37ff6288ee64e0f0ec9a0b",
+  "btc": 10.8
+ },
+ {
+  "bits": 109,
+  "range_min": "1000000000000000000000000000",
+  "range_max": "1fffffffffffffffffffffffffff",
+  "address": "1GvgAXVCbA8FBjXfWiAms4ytFeJcKsoyhL",
+  "hash160": "aeb0a0197442d4ade8ef41442d557b0e22b85ac0",
+  "btc": 10.9
+ },
+ {
+  "bits": 111,
+  "range_min": "4000000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffffff",
+  "address": "1824ZJQ7nKJ9QFTRBqn7z7dHV5EGpzUpH3",
+  "hash160": "4cfc43fe12a330c8164251e38c0c0c3c84cf86f6",
+  "btc": 11.1
+ },
+ {
+  "bits": 112,
+  "range_min": "8000000000000000000000000000",
+  "range_max": "ffffffffffffffffffffffffffff",
+  "address": "18A7NA9FTsnJxWgkoFfPAFbQzuQxpRtCos",
+  "hash160": "4e81efec43c5195aeca0e3877664330418b8e48e",
+  "btc": 11.2
+ },
+ {
+  "bits": 113,
+  "range_min": "10000000000000000000000000000",
+  "range_max": "1ffffffffffffffffffffffffffff",
+  "address": "1NeGn21dUDDeqFQ63xb2SpgUuXuBLA4WT4",
+  "hash160": "ed673389e4b12925316f9166d56d701829e53cf8",
+  "btc": 11.3
+ },
+ {
+  "bits": 114,
+  "range_min": "20000000000000000000000000000",
+  "range_max": "3ffffffffffffffffffffffffffff",
+  "address": "174SNxfqpdMGYy5YQcfLbSTK3MRNZEePoy",
+  "hash160": "42773005f9594cd16b10985d428418acb7f352ec",
+  "btc": 11.4
+ },
+ {
+  "bits": 116,
+  "range_min": "80000000000000000000000000000",
+  "range_max": "fffffffffffffffffffffffffffff",
+  "address": "1MnJ6hdhvK37VLmqcdEwqC3iFxyWH2PHUV",
+  "hash160": "e3f381c34a20da049779b44cae0417c7fb2898d0",
+  "btc": 11.6
+ },
+ {
+  "bits": 117,
+  "range_min": "100000000000000000000000000000",
+  "range_max": "1fffffffffffffffffffffffffffff",
+  "address": "1KNRfGWw7Q9Rmwsc6NT5zsdvEb9M2Wkj5Z",
+  "hash160": "c97f9591e28687be1c4d972e25be7c372a3221b4",
+  "btc": 11.7
+ },
+ {
+  "bits": 118,
+  "range_min": "200000000000000000000000000000",
+  "range_max": "3fffffffffffffffffffffffffffff",
+  "address": "1PJZPzvGX19a7twf5HyD2VvNiPdHLzm9F6",
+  "hash160": "f4a4e1c11a5bbbd2fc139d221825407c66e0b8b4",
+  "btc": 11.8
+ },
+ {
+  "bits": 119,
+  "range_min": "400000000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffffffff",
+  "address": "1GuBBhf61rnvRe4K8zu8vdQB3kHzwFqSy7",
+  "hash160": "ae6804b35c82f47f8b0a42d8c5e514fe5ef0a883",
+  "btc": 11.9
+ },
+ {
+  "bits": 121,
+  "range_min": "1000000000000000000000000000000",
+  "range_max": "1ffffffffffffffffffffffffffffff",
+  "address": "1GDSuiThEV64c166LUFC9uDcVdGjqkxKyh",
+  "hash160": "a6e4818537e42f7b3f021daa810367dad4dda16f",
+  "btc": 12.1
+ },
+ {
+  "bits": 122,
+  "range_min": "2000000000000000000000000000000",
+  "range_max": "3ffffffffffffffffffffffffffffff",
+  "address": "1Me3ASYt5JCTAK2XaC32RMeH34PdprrfDx",
+  "hash160": "e263b62ea294b9650615a13b926e75944c823990",
+  "btc": 12.2
+ },
+ {
+  "bits": 123,
+  "range_min": "4000000000000000000000000000000",
+  "range_max": "7ffffffffffffffffffffffffffffff",
+  "address": "1CdufMQL892A69KXgv6UNBD17ywWqYpKut",
+  "hash160": "7fa4515066ba6905f894b2078f9af7b1379169cf",
+  "btc": 12.3
+ },
+ {
+  "bits": 124,
+  "range_min": "8000000000000000000000000000000",
+  "range_max": "fffffffffffffffffffffffffffffff",
+  "address": "1BkkGsX9ZM6iwL3zbqs7HWBV7SvosR6m8N",
+  "hash160": "75f74467ce7214f1767406d5ed12012aa523c48e",
+  "btc": 12.4
+ },
+ {
+  "bits": 126,
+  "range_min": "20000000000000000000000000000000",
+  "range_max": "3fffffffffffffffffffffffffffffff",
+  "address": "1AWCLZAjKbV1P7AHvaPNCKiB7ZWVDMxFiz",
+  "hash160": "683ea8a1ef06eada90556017d44323b5c04e00f1",
+  "btc": 12.6
+ },
+ {
+  "bits": 127,
+  "range_min": "40000000000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffffffffff",
+  "address": "1G6EFyBRU86sThN3SSt3GrHu1sA7w7nzi4",
+  "hash160": "a58708aa98ad35c889bb36d8049bf9e9cacfd02a",
+  "btc": 12.7
+ },
+ {
+  "bits": 128,
+  "range_min": "80000000000000000000000000000000",
+  "range_max": "ffffffffffffffffffffffffffffffff",
+  "address": "1MZ2L1gFrCtkkn6DnTT2e4PFUTHw9gNwaj",
+  "hash160": "e170ef514689d7230da362a0c121a07723550512",
+  "btc": 12.8
+ },
+ {
+  "bits": 129,
+  "range_min": "100000000000000000000000000000000",
+  "range_max": "1ffffffffffffffffffffffffffffffff",
+  "address": "1Hz3uv3nNZzBVMXLGadCucgjiCs5W9vaGz",
+  "hash160": "ba4c2748360a6b66263e11d1dc8658463ca5ff18",
+  "btc": 12.9
+ },
+ {
+  "bits": 131,
+  "range_min": "400000000000000000000000000000000",
+  "range_max": "7ffffffffffffffffffffffffffffffff",
+  "address": "16zRPnT8znwq42q7XeMkZUhb1bKqgRogyy",
+  "hash160": "41b4b36a6c036568972380177eca2916cacd71de",
+  "btc": 13.1
+ },
+ {
+  "bits": 132,
+  "range_min": "800000000000000000000000000000000",
+  "range_max": "fffffffffffffffffffffffffffffffff",
+  "address": "1KrU4dHE5WrW8rhWDsTRjR21r8t3dsrS3R",
+  "hash160": "cecd3ca4319651bd3afd1e23ab66e111ed38d16d",
+  "btc": 13.2
+ },
+ {
+  "bits": 133,
+  "range_min": "1000000000000000000000000000000000",
+  "range_max": "1fffffffffffffffffffffffffffffffff",
+  "address": "17uDfp5r4n441xkgLFmhNoSW1KWp6xVLD",
+  "hash160": "014e15e4ea6da460cc7835e262676baa37988e4f",
+  "btc": 13.3
+ },
+ {
+  "bits": 134,
+  "range_min": "2000000000000000000000000000000000",
+  "range_max": "3fffffffffffffffffffffffffffffffff",
+  "address": "13A3JrvXmvg5w9XGvyyR4JEJqiLz8ZySY3",
+  "hash160": "17a5ebfaf62e73f149e33ba674836801f13a80b9",
+  "btc": 13.4
+ },
+ {
+  "bits": 135,
+  "range_min": "4000000000000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffffffffffff",
+  "address": "16RGFo6hjq9ym6Pj7N5H7L1NR1rVPJyw2v",
+  "hash160": "3b6f58a75a54bfd85d1bc6c51180fdc732992326",
+  "btc": 13.5
+ },
+ {
+  "bits": 136,
+  "range_min": "8000000000000000000000000000000000",
+  "range_max": "ffffffffffffffffffffffffffffffffff",
+  "address": "1UDHPdovvR985NrWSkdWQDEQ1xuRiTALq",
+  "hash160": "05257be4b57ee43fc09762d5d3a9ad4a6e1a0364",
+  "btc": 13.6
+ },
+ {
+  "bits": 137,
+  "range_min": "10000000000000000000000000000000000",
+  "range_max": "1ffffffffffffffffffffffffffffffffff",
+  "address": "15nf31J46iLuK1ZkTnqHo7WgN5cARFK3RA",
+  "hash160": "3482f8986e13c018692053a784481c63a3554c9c",
+  "btc": 13.7
+ },
+ {
+  "bits": 138,
+  "range_min": "20000000000000000000000000000000000",
+  "range_max": "3ffffffffffffffffffffffffffffffffff",
+  "address": "1Ab4vzG6wEQBDNQM1B2bvUz4fqXXdFk2WT",
+  "hash160": "692a8e583866fc9056f5c61a45969fb9d868a08c",
+  "btc": 13.8
+ },
+ {
+  "bits": 139,
+  "range_min": "40000000000000000000000000000000000",
+  "range_max": "7ffffffffffffffffffffffffffffffffff",
+  "address": "1Fz63c775VV9fNyj25d9Xfw3YHE6sKCxbt",
+  "hash160": "a45dae9cd5d3fde21e5aa9a95367d107267b3b8a",
+  "btc": 13.9
+ },
+ {
+  "bits": 140,
+  "range_min": "80000000000000000000000000000000000",
+  "range_max": "fffffffffffffffffffffffffffffffffff",
+  "address": "1QKBaU6WAeycb3DbKbLBkX7vJiaS8r42Xo",
+  "hash160": "ffbb35a7bb9bbe16c1aa2534f7ff11d59c8e3d1a",
+  "btc": 14.0
+ },
+ {
+  "bits": 141,
+  "range_min": "100000000000000000000000000000000000",
+  "range_max": "1fffffffffffffffffffffffffffffffffff",
+  "address": "1CD91Vm97mLQvXhrnoMChhJx4TP9MaQkJo",
+  "hash160": "7af50f73fd580f1713af3a6f9c5de49643ec6fc6",
+  "btc": 14.1
+ },
+ {
+  "bits": 142,
+  "range_min": "200000000000000000000000000000000000",
+  "range_max": "3fffffffffffffffffffffffffffffffffff",
+  "address": "15MnK2jXPqTMURX4xC3h4mAZxyCcaWWEDD",
+  "hash160": "2fcea55e6d027a2ba7c7ebe95eedf47766730fe2",
+  "btc": 14.2
+ },
+ {
+  "bits": 143,
+  "range_min": "400000000000000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffffffffffffff",
+  "address": "13N66gCzWWHEZBxhVxG18P8wyjEWF9Yoi1",
+  "hash160": "19ed3e03d19ddcedd5fa86543be820b3a7951650",
+  "btc": 14.3
+ },
+ {
+  "bits": 144,
+  "range_min": "800000000000000000000000000000000000",
+  "range_max": "ffffffffffffffffffffffffffffffffffff",
+  "address": "1NevxKDYuDcCh1ZMMi6ftmWwGrZKC6j7Ux",
+  "hash160": "ed87120066e244ff5331d5f8625873d7a3acc39c",
+  "btc": 14.4
+ },
+ {
+  "bits": 145,
+  "range_min": "1000000000000000000000000000000000000",
+  "range_max": "1ffffffffffffffffffffffffffffffffffff",
+  "address": "19GpszRNUej5yYqxXoLnbZWKew3KdVLkXg",
+  "hash160": "5abf369388deb8072741b4eb43ef10fa9388a729",
+  "btc": 14.5
+ },
+ {
+  "bits": 146,
+  "range_min": "2000000000000000000000000000000000000",
+  "range_max": "3ffffffffffffffffffffffffffffffffffff",
+  "address": "1M7ipcdYHey2Y5RZM34MBbpugghmjaV89P",
+  "hash160": "dca7ebfb78ce21884300f133d89244bc4b1b756f",
+  "btc": 14.6
+ },
+ {
+  "bits": 147,
+  "range_min": "4000000000000000000000000000000000000",
+  "range_max": "7ffffffffffffffffffffffffffffffffffff",
+  "address": "18aNhurEAJsw6BAgtANpexk5ob1aGTwSeL",
+  "hash160": "5318b9d7fcc93873f768725eb68ba2c924bb07ee",
+  "btc": 14.7
+ },
+ {
+  "bits": 148,
+  "range_min": "8000000000000000000000000000000000000",
+  "range_max": "fffffffffffffffffffffffffffffffffffff",
+  "address": "1FwZXt6EpRT7Fkndzv6K4b4DFoT4trbMrV",
+  "hash160": "a3e3612e586fd206efb8eee6ccd58318e182829a",
+  "btc": 14.8
+ },
+ {
+  "bits": 149,
+  "range_min": "10000000000000000000000000000000000000",
+  "range_max": "1fffffffffffffffffffffffffffffffffffff",
+  "address": "1CXvTzR6qv8wJ7eprzUKeWxyGcHwDYP1i2",
+  "hash160": "7e827e3b90da24c2a15f7b67e3bbece39955a5d0",
+  "btc": 14.9
+ },
+ {
+  "bits": 150,
+  "range_min": "20000000000000000000000000000000000000",
+  "range_max": "3fffffffffffffffffffffffffffffffffffff",
+  "address": "1MUJSJYtGPVGkBCTqGspnxyHahpt5Te8jy",
+  "hash160": "e08c4d3bc9cf2b3e2cb88de2bfaa4fe8c7aa3f24",
+  "btc": 15.0
+ },
+ {
+  "bits": 151,
+  "range_min": "40000000000000000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffffffffffffffff",
+  "address": "13Q84TNNvgcL3HJiqQPvyBb9m4hxjS3jkV",
+  "hash160": "1a4fb632f0de0c53a0a31d57f840a19e56c645ee",
+  "btc": 15.1
+ },
+ {
+  "bits": 152,
+  "range_min": "80000000000000000000000000000000000000",
+  "range_max": "ffffffffffffffffffffffffffffffffffffff",
+  "address": "1LuUHyrQr8PKSvbcY1v1PiuGuqFjWpDumN",
+  "hash160": "da56cd815fa2f0d6a4ce6d25ed7b1a01d9f9bc6b",
+  "btc": 15.2
+ },
+ {
+  "bits": 153,
+  "range_min": "100000000000000000000000000000000000000",
+  "range_max": "1ffffffffffffffffffffffffffffffffffffff",
+  "address": "18192XpzzdDi2K11QVHR7td2HcPS6Qs5vg",
+  "hash160": "4ccf94a1b0efd63cddeee0ef5eee5ebe720cfcbf",
+  "btc": 15.3
+ },
+ {
+  "bits": 154,
+  "range_min": "200000000000000000000000000000000000000",
+  "range_max": "3ffffffffffffffffffffffffffffffffffffff",
+  "address": "1NgVmsCCJaKLzGyKLFJfVequnFW9ZvnMLN",
+  "hash160": "edd2e206825fa8949d1304cd82c08d64b222f2eb",
+  "btc": 15.4
+ },
+ {
+  "bits": 155,
+  "range_min": "400000000000000000000000000000000000000",
+  "range_max": "7ffffffffffffffffffffffffffffffffffffff",
+  "address": "1AoeP37TmHdFh8uN72fu9AqgtLrUwcv2wJ",
+  "hash160": "6b8b7830f73c5bf9e8beb9f161ad82b3bde992e4",
+  "btc": 15.5
+ },
+ {
+  "bits": 156,
+  "range_min": "800000000000000000000000000000000000000",
+  "range_max": "fffffffffffffffffffffffffffffffffffffff",
+  "address": "1FTpAbQa4h8trvhQXjXnmNhqdiGBd1oraE",
+  "hash160": "9ea3f29aaedf7da10b1488934c50a39e271b0b64",
+  "btc": 15.6
+ },
+ {
+  "bits": 157,
+  "range_min": "1000000000000000000000000000000000000000",
+  "range_max": "1fffffffffffffffffffffffffffffffffffffff",
+  "address": "14JHoRAdmJg3XR4RjMDh6Wed6ft6hzbQe9",
+  "hash160": "242d790e5a168043c76f0539fd894b73ee67b3b3",
+  "btc": 15.7
+ },
+ {
+  "bits": 158,
+  "range_min": "2000000000000000000000000000000000000000",
+  "range_max": "3fffffffffffffffffffffffffffffffffffffff",
+  "address": "19z6waranEf8CcP8FqNgdwUe1QRxvUNKBG",
+  "hash160": "628dacebb0faa7f81670e174ca4c8a95a7e37029",
+  "btc": 15.8
+ },
+ {
+  "bits": 159,
+  "range_min": "4000000000000000000000000000000000000000",
+  "range_max": "7fffffffffffffffffffffffffffffffffffffff",
+  "address": "14u4nA5sugaswb6SZgn5av2vuChdMnD9E5",
+  "hash160": "2ac1295b4e54b3f15bb0a99f84018d2082495645",
+  "btc": 15.9
+ },
+ {
+  "bits": 160,
+  "range_min": "8000000000000000000000000000000000000000",
+  "range_max": "ffffffffffffffffffffffffffffffffffffffff",
+  "address": "1NBC8uXJy1GiJ6drkiZa1WuKn51ps7EPTv",
+  "hash160": "e84818e1bf7f699aa6e28ef9edfb582099099292",
+  "btc": 16.0
+ }
+]
