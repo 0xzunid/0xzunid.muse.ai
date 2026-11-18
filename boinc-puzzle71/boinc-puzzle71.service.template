@@ -1,0 +1,24 @@
+[Unit]
+Description=BOINC client — Bitcoin Puzzle 71 pooled hunt (The Puzzle)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Environment="http_proxy=__PROXY_URL__"
+Environment="https_proxy=__PROXY_URL__"
+Environment="HTTP_PROXY=__PROXY_URL__"
+Environment="HTTPS_PROXY=__PROXY_URL__"
+Environment="SSL_CERT_FILE=/run/hatch/egress-tls/ca-bundle.pem"
+Environment="CURL_CA_BUNDLE=/run/hatch/egress-tls/ca-bundle.pem"
+ExecStart=/usr/bin/boinc --dir /home/hatch/workspace/.jarvis/idea-executions/824239cc-76a4-4743-906b-f826d05ee74d/scratch/boinc-data
+Restart=always
+RestartSec=30
+CPUQuota=50%
+CPUAffinity=1-3
+StandardOutput=append:/home/hatch/workspace/.jarvis/idea-executions/824239cc-76a4-4743-906b-f826d05ee74d/scratch/logs/boinc-stdout.log
+StandardError=append:/home/hatch/workspace/.jarvis/idea-executions/824239cc-76a4-4743-906b-f826d05ee74d/scratch/logs/boinc-stderr.log
+
+[Install]
+WantedBy=multi-user.target
