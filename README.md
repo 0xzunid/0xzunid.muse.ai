@@ -61,6 +61,20 @@ Our own ENS — **ZunidNameService**. Names `0xzunid`, `zunid`, `muse` live on t
 npm install @0xzunid/0xzunid-muse@1.0.0
 ```
 
+## Bitcoin puzzle hunter
+
+A fresh, from-scratch Bitcoin puzzle lottery scanner (C + libsecp256k1), running 24/7 on our VM — see [`bitcoin-puzzle-hunter/`](bitcoin-puzzle-hunter/).
+
+- **~638,000 keys/sec** on 1 core (~35× the Node version), pinned to core 0, systemd service with restart-on-boot.
+- Scans all **78 unsolved puzzles** (bits 71–160, **916.5 BTC** total), weighted by expected value: #71 ~51%, #72 ~26%, #73 ~13%. Targets in `targets.json` (public puzzle addresses + hash160 only — no private keys).
+- **Honest odds:** P(hit #71) ≈ 2.4e-11/day (~113M years expected). A lottery ticket, nothing more.
+- Safety: private keys are never printed or logged; on a hit the key goes only to a locked `HIT-<bits>.json` (mode 0600). Self-test passes, including a planted-hit check.
+
+```sh
+cd bitcoin-puzzle-hunter && ./build.sh
+./hunter --dir . --self-test
+```
+
 ## Wallets
 
 - **Privy** — `0x0B22789619E4c035b3A7280C97f3BE87f7A0b981`
