@@ -9,10 +9,10 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 16px; }
-  header img { width: 100%; border-radius: 16px; display: block; }
-  .hero { margin-top: 16px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); }
-  .hero img { width: 100%; display: block; }
-  .hero .cap { padding: 12px 16px; color: var(--muted); font-size: 14px; }
+  header img { width: min(100%, 300px); border-radius: 16px; display: block; margin: 0 auto; }
+  .hero { margin-top: 16px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); display: flex; align-items: center; }
+  .hero img { width: 140px; height: 140px; object-fit: cover; flex-shrink: 0; display: block; }
+  .hero .cap { padding: 12px 16px; color: var(--muted); font-size: 14px; flex: 1; }
   h1 { font-size: 28px; margin: 18px 0 4px; }
   h1 .grad { background: linear-gradient(90deg, var(--lime), var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .tag { color: var(--muted); margin: 0 0 16px; }
@@ -38,6 +38,7 @@
   .foot { color: var(--muted); font-size: 13px; margin: 24px 0 8px; text-align: center; }
   .winners { columns: 2; font-size: 14px; }
   .winners div { break-inside: avoid; padding: 2px 0; }
+  details summary { cursor: pointer; color: var(--lime); font-weight: 600; padding: 8px 0; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 </head>
@@ -83,7 +84,10 @@
     <p><span class="pill gold">GOLDEN × 8</span> — each wins 8/144 of the pool</p>
     <div class="winners" id="goldenList"></div>
     <p><span class="pill ember">EMBER × 80</span> — each wins 1/144 of the pool</p>
-    <div class="winners" id="emberList"></div>
+    <details>
+      <summary>Show all 88 winning tickets</summary>
+      <div class="winners" id="emberList"></div>
+    </details>
   </div>
 
   <div class="card">
