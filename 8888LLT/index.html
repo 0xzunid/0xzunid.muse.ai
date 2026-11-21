@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>8888LuckyLotteryTicket — 8888LLT | 0xzunid.muse</title>
+<meta name="description" content="8888LuckyLotteryTicket — 8,888 lottery-ticket NFTs on Arc. Mint price 0.08888 USDC. 888 winners every round.">
+<style>
+:root { --lime:#b8f53d; --lime2:#7ee081; --orange:#ff7a1a; --bg:#0b0b12; --card:#15151f; --line:#26263a; --text:#f2f2f7; --muted:#9a9ab0; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+a { color:var(--lime); text-decoration:none; }
+.wrap { max-width:1060px; margin:0 auto; padding:16px 14px 40px; }
+header { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.logo { width:52px; height:52px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:19px; color:#0b0b12; background:linear-gradient(135deg,var(--lime),var(--lime2) 55%,var(--orange)); box-shadow:0 0 0 2px #26263a; }
+h1 { margin:0; font-size:26px; line-height:1.1; }
+h1 .grad { background:linear-gradient(90deg,var(--lime),var(--orange)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.sub { color:var(--muted); font-size:13px; margin:2px 0 0; }
+.live { margin-left:auto; background:#0f2a12; color:#8df59a; border:1px solid #2f7a3a; border-radius:999px; padding:6px 12px; font-size:12px; font-weight:700; }
+.tag { color:var(--muted); font-size:14px; line-height:1.6; margin:14px 0 0; }
+.stats { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:14px; }
+@media (min-width:640px) { .stats { grid-template-columns:repeat(4,1fr); } }
+.stat { background:#0e0e17; border:1px solid var(--line); border-radius:12px; padding:12px; text-align:center; }
+.stat b { display:block; font-size:19px; }
+.stat span { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.05em; }
+.btns { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.btn { display:inline-block; background:linear-gradient(90deg,var(--lime),var(--lime2)); color:#0b0b12; border:0; border-radius:999px; padding:12px 20px; font-weight:700; font-size:15px; }
+.btn.ghost { background:transparent; color:var(--lime); border:1px solid var(--lime); }
+.hero { display:grid; grid-template-columns:1fr; margin-top:16px; background:#0e0e17; border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+@media (min-width:640px) { .hero { grid-template-columns:1fr 1fr; } }
+.hero-art { width:100%; aspect-ratio:1; object-fit:cover; display:block; background:#0e0e17; }
+@media (min-width:640px) { .hero-art { aspect-ratio:auto; height:100%; } }
+.hero-sale { padding:18px; }
+.hero-top { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.hero-top .sale { font-weight:700; font-size:15px; }
+.mint-now { background:#0f2a12; color:#8df59a; border:1px solid #2f7a3a; border-radius:999px; padding:4px 10px; font-size:12px; font-weight:700; white-space:nowrap; }
+.hero-price { font-size:32px; font-weight:900; margin-top:10px; }
+.hero-note { color:var(--muted); font-size:13px; margin-top:4px; }
+.hero-minted { margin-top:16px; font-size:13px; color:var(--muted); display:flex; justify-content:space-between; }
+.bar { height:8px; background:#1c1c2a; border-radius:999px; margin-top:8px; overflow:hidden; }
+.bar i { display:block; height:100%; background:linear-gradient(90deg,var(--lime),var(--orange)); border-radius:999px; transition:width .4s; }
+.hero-btn { display:block; text-align:center; margin-top:16px; }
+.filters { position:sticky; top:0; z-index:5; background:var(--bg); padding:12px 0 10px; margin-top:18px; border-bottom:1px solid var(--line); }
+.row2 { display:flex; gap:8px; }
+.row2 input, .row2 select { flex:1; min-width:0; background:#0e0e17; color:var(--text); border:1px solid var(--line); border-radius:10px; padding:10px 12px; font-size:15px; }
+.row2 select { flex:0 0 132px; }
+.grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:16px; }
+@media (min-width:640px) { .grid { grid-template-columns:repeat(3,1fr); } }
+@media (min-width:900px) { .grid { grid-template-columns:repeat(4,1fr); } }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; cursor:pointer; }
+.card img { width:100%; aspect-ratio:1; display:block; background:#0e0e17; }
+.card .meta { padding:10px 12px 12px; }
+.card .name { font-weight:700; font-size:15px; }
+.card .traits { color:var(--muted); font-size:12px; margin-top:3px; }
+.badge { display:inline-block; font-size:11px; font-weight:700; border-radius:999px; padding:3px 9px; margin-top:7px; border:1px solid var(--line); background:#1c1c2a; color:var(--lime); }
+.empty { text-align:center; padding:36px 16px; background:#0e0e17; border:1px dashed var(--line); border-radius:16px; margin-top:16px; }
+.empty-title { font-size:20px; font-weight:800; }
+.empty p { color:var(--muted); line-height:1.6; }
+.empty .btn { margin-top:8px; }
+.status { text-align:center; color:var(--muted); font-size:14px; padding:18px 0 4px; }
+.more { display:block; margin:20px auto 0; background:transparent; color:var(--lime); border:1px solid var(--lime); border-radius:999px; padding:12px 26px; font-weight:700; font-size:15px; cursor:pointer; }
+.more:disabled { opacity:.4; cursor:default; }
+.foot { color:var(--muted); font-size:13px; margin:28px 0 8px; text-align:center; line-height:1.7; }
+.foot .mono { font-family:ui-monospace,monospace; font-size:12px; word-break:break-all; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">ZM</div>
+    <div>
+      <h1>8888LuckyLotteryTicket <span class="grad">8888LLT</span></h1>
+      <p class="sub">by 0xzunid.muse &middot; lottery-ticket NFTs on Arc</p>
+    </div>
+    <span class="live" id="liveBadge">LIVE</span>
+  </header>
+  <p class="tag">8,888 lucky lottery tickets. Mint price 0.08888 USDC. Every round, 888 winning tickets &mdash; 8 GOLDEN, 80 EMBER, 800 SPARK &mdash; share 70% of the prize pool, and every other ticket claims an equal dividend from the remaining 30%. Perpetual rounds, 90-day claim windows. Winners are committed by hash before each reveal.</p>
+  <div class="stats">
+    <div class="stat"><b id="minted">&hellip;</b><span>Minted / 8,888</span></div>
+    <div class="stat"><b>0.08888 USDC</b><span>Mint price</span></div>
+    <div class="stat"><b>888 / round</b><span>Winners</span></div>
+    <div class="stat"><b id="pool">&hellip;</b><span>Prize pool</span></div>
+  </div>
+  <div class="btns">
+    <a class="btn" href="https://opensea.io/collection/8888luckylotteryticket-298199102" target="_blank" rel="noopener">Mint on OpenSea</a>
+    <a class="btn ghost" href="https://arc.etherscan.io/address/0x19C121C501caAA0DAd3E4dEf5632F3F1C5055531" target="_blank" rel="noopener">View contract</a>
+  </div>
+
+  <section class="hero">
+    <video class="hero-art" autoplay muted loop playsinline poster="../lt8888arc/media/LLT.jpg">
+      <source src="../lt8888arc/media/lucky-lottery-8888-3d.mp4" type="video/mp4">
+      <img class="hero-art" src="../lt8888arc/media/LLT.jpg" alt="Lucky Lottery 8888">
+    </video>
+    <div class="hero-sale">
+      <div class="hero-top"><span class="sale">Public sale</span><span class="mint-now">&#9679; Minting Now</span></div>
+      <div class="hero-price">0.08888 USDC</div>
+      <div class="hero-note">Mint price &middot; 5 per wallet &middot; open until sellout (ends Nov 22, 2027 on OpenSea)</div>
+      <div class="hero-minted"><span>Items Minted</span><b id="heroMinted">0 / 8,888</b></div>
+      <div class="bar"><i id="heroBar" style="width:0%"></i></div>
+      <a class="btn hero-btn" href="https://opensea.io/collection/8888luckylotteryticket-298199102" target="_blank" rel="noopener">Mint on OpenSea</a>
+    </div>
+  </section>
+
+  <div class="filters" id="filters">
+    <div class="row2">
+      <input id="search" type="number" min="1" max="8888" placeholder="Search ticket # (1–8888)">
+      <select id="sort">
+        <option value="asc"># ascending</option>
+        <option value="desc"># descending</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="empty" id="emptyState" hidden>
+    <div class="empty-title">No tickets minted yet</div>
+    <p>Nothing exists on-chain until someone mints. Be the first &mdash; your ticket enters every round, forever.</p>
+    <a class="btn" href="https://opensea.io/collection/8888luckylotteryticket-298199102" target="_blank" rel="noopener">Mint the first ticket</a>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="status" id="status">Loading tickets&hellip;</div>
+  <button class="more" id="moreBtn">Load more</button>
+
+  <p class="foot">8888LuckyLotteryTicket &middot; 0xzunid.muse &mdash; zunid + muse, build<br>
+  Token: <span class="mono">0x19C121C501caAA0DAd3E4dEf5632F3F1C5055531</span> (Arc)<br>
+  Prize pool: <span class="mono">0x8C0D0E74D7e5b7b176Ee8f48e1C7660c2762CA3E</span> &middot; Fee splitter: <span class="mono">0x5c7B2194176B5Dd3C29E83e92f6829e5F94298d8</span><br>
+  Royalty splitter: <span class="mono">0x09875209f7b4A1723B2877842c6dfE10613FE0B8</span> &middot; 5% royalties, split 50/50 deployer / pool<br>
+  Round 1 commitment: <span class="mono">0x552a35d12537d5386ae6685b6aead96bd28dda067b2808a00c30912b92c30980</span><br>
+  First mint: <a href="https://arc.etherscan.io/tx/0x2125586ad6cd54f737800f702c8f327552696f63bf578a9e2f24eda799715d7f" target="_blank" rel="noopener">token #1, 2026-11-22</a> &middot; Source: <a href="https://github.com/0xzunid/0xzunid.muse.ai/tree/main/lt8888arc" target="_blank" rel="noopener">lt8888arc on GitHub</a><br>
+  Images load on demand from the collection metadata. Tap a card to open it on OpenSea.</p>
+</div>
+<script>
+"use strict";
+const TOTAL = 8888, PAGE = 24;
+const CONTRACT = "0x19C121C501caAA0DAd3E4dEf5632F3F1C5055531";
+const POOL = "0x8C0D0E74D7e5b7b176Ee8f48e1C7660c2762CA3E";
+const RPC = "https://rpc.mainnet.arc.io";
+const META = "https://0xzunid.github.io/0xzunid.muse.ai/lt8888arc/metadata/";
+const cache = new Map();
+let ids = [], shown = 0, sortDir = "asc", loading = false, mintedCount = 0;
+
+function buildIds() {
+  const q = document.getElementById("search").value.trim();
+  if (q) {
+    const n = parseInt(q, 10);
+    ids = (n >= 1 && n <= mintedCount) ? [n] : [];
+    return;
+  }
+  ids = Array.from({length: mintedCount}, (_, i) => i + 1);
+  if (sortDir === "desc") ids.reverse();
+}
+function trait(md, t) {
+  const a = (md.attributes || []).find(x => x.trait_type === t);
+  return a ? a.value : "";
+}
+async function fetchMeta(n) {
+  if (cache.has(n)) return cache.get(n);
+  const p = fetch(META + n + ".json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); });
+  cache.set(n, p);
+  return p;
+}
+function cardEl(n, md) {
+  const el = document.createElement("article");
+  el.className = "card";
+  el.innerHTML =
+    '<img loading="lazy" alt="8888LuckyLotteryTicket #' + n + '" src="' + md.image + '">' +
+    '<div class="meta"><div class="name">8888LuckyLotteryTicket #' + n + '</div>' +
+    '<div class="traits">Ticket #' + trait(md, "Ticket Number") + ' &middot; ' + trait(md, "Chain") + '</div>' +
+    '<span class="badge">8888LLT</span></div>';
+  el.addEventListener("click", () => {
+    window.open("https://opensea.io/assets/arc/" + CONTRACT + "/" + n, "_blank", "noopener");
+  });
+  return el;
+}
+async function loadMore() {
+  if (loading || shown >= ids.length) return;
+  loading = true;
+  const status = document.getElementById("status"), more = document.getElementById("moreBtn");
+  status.textContent = "Loading tickets\u2026";
+  more.disabled = true;
+  const batch = ids.slice(shown, shown + PAGE);
+  const grid = document.getElementById("grid");
+  const results = await Promise.all(batch.map(n => fetchMeta(n).then(md => ({n, md})).catch(() => ({n, md: null}))));
+  for (const {n, md} of results) {
+    if (!md) {
+      const el = document.createElement("article");
+      el.className = "card";
+      el.innerHTML = '<div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:var(--muted)">Failed to load #' + n + '</div><div class="meta"><div class="name">8888LuckyLotteryTicket #' + n + '</div></div>';
+      grid.appendChild(el);
+      continue;
+    }
+    grid.appendChild(cardEl(n, md));
+  }
+  shown += batch.length;
+  status.textContent = ids.length ? ("Showing " + shown + " of " + ids.length.toLocaleString() + " tickets") : (document.getElementById("search").value.trim() ? "That ticket isn't minted yet — be the first to mint it." : "No tickets minted yet.");
+  more.disabled = shown >= ids.length;
+  more.style.display = shown >= ids.length ? "none" : "block";
+  loading = false;
+}
+function reset() {
+  document.getElementById("grid").innerHTML = "";
+  document.getElementById("moreBtn").style.display = "block";
+  shown = 0;
+  buildIds();
+  loadMore();
+}
+document.getElementById("sort").addEventListener("change", e => { sortDir = e.target.value; reset(); });
+document.getElementById("search").addEventListener("input", () => { reset(); });
+document.getElementById("moreBtn").addEventListener("click", loadMore);
+
+function updateStats() {
+  document.getElementById("minted").textContent = mintedCount.toLocaleString();
+  document.getElementById("liveBadge").textContent = mintedCount > 0 ? "LIVE \u2014 " + mintedCount + " minted" : "LIVE";
+  document.getElementById("heroMinted").textContent = mintedCount.toLocaleString() + " / 8,888";
+  document.getElementById("heroBar").style.width = (mintedCount / TOTAL * 100) + "%";
+  const empty = mintedCount === 0;
+  document.getElementById("emptyState").hidden = !empty;
+  document.getElementById("filters").hidden = empty;
+  document.getElementById("grid").style.display = empty ? "none" : "grid";
+  if (empty) document.getElementById("status").textContent = "";
+}
+async function rpc(method, params) {
+  const r = await fetch(RPC, {method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({jsonrpc: "2.0", id: 1, method, params})});
+  const j = await r.json();
+  return j.result;
+}
+// Live minted count from the Arc contract (totalSupply), plain JSON-RPC — no wallet needed.
+// Only minted tickets exist: the grid is gated on totalSupply (token IDs mint sequentially from 1).
+rpc("eth_call", [{to: CONTRACT, data: "0x18160ddd"}, "latest"]).then(hex => {
+  mintedCount = parseInt(hex || "0x0", 16);
+  updateStats();
+  reset();
+}).catch(() => { mintedCount = 0; updateStats(); reset(); });
+// Live prize-pool balance (native USDC, 18 decimals).
+rpc("eth_getBalance", [POOL, "latest"]).then(hex => {
+  const wei = BigInt(hex || "0x0");
+  const whole = wei / 1000000000000000000n;
+  const frac = (wei % 1000000000000000000n).toString().padStart(18, "0").slice(0, 5).replace(/0+$/, "");
+  document.getElementById("pool").textContent = whole.toString() + (frac ? "." + frac : "") + " USDC";
+}).catch(() => { document.getElementById("pool").textContent = "\u2014"; });
+</script>
+</body>
+</html>

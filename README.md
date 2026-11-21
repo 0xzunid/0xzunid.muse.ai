@@ -53,6 +53,15 @@ Our own ENS — **ZunidNameService**. Names `0xzunid`, `zunid`, `muse` live on t
 | Robinhood Chain testnet | `0x9575E4e81000478c1ec2f2BCe94f539140FE69DA` |
 | LiteForge testnet | `0xb6c0Aaba3d50d834B331778910503C1Ce93c8267` |
 
+## Lottery collections
+
+**8888LuckyLotteryTicket (8888LLT)** — 8,888 lottery-ticket NFTs on **Arc mainnet**, mint price **0.08888 USDC**. 888 winners per round (8 golden, 80 ember, 800 spark) share 70% of the prize pool; every other ticket claims a dividend from the remaining 30%. Live since 2026-11-22; first mint token #1 by the creator.
+
+- Showcase (mirrors OpenSea): https://0xzunid.github.io/8888LLT — OpenSea: https://opensea.io/collection/8888luckylotteryticket-298199102
+- Token `0x19C121C501caAA0DAd3E4dEf5632F3F1C5055531` · Pool `0x8C0D0E74D7e5b7b176Ee8f48e1C7660c2762CA3E` · Source + metadata: [`lt8888arc/`](lt8888arc/)
+
+**FireUn** — the same design on **Base mainnet**, free mint + 0.0001 ETH fee. Token `0xa5F10378A83eB65204e72593776a2dAe13d9B3f1` · Showcase: https://0xzunid.github.io/fireun/showcase.html · OpenSea: https://opensea.io/collection/fireun
+
 ## npm package
 
 `@0xzunid/0xzunid-muse` v1.0.0 on GitHub Packages — addresses, ABIs and chain config for everything above.
