@@ -416,7 +416,7 @@ document.getElementById("connectBtn").onclick = async () => {
   if (!window.ethereum) { log("No wallet found. Install MetaMask."); return; }
   try {
     await window.ethereum.request({ method: "eth_requestAccounts" });
-    const wp = new ethers.providers.Web3Provider(window.ethereum);
+    const wp = new ethers.providers.Web3Provider(window.ethereum, "any"); // "any": do NOT throw NETWORK_ERROR when the wallet switches chains (ethers v5 caches the first network it sees — switching 1 -> 8453 on connect used to poison the provider)
     const net = await wp.getNetwork();
     if (net.chainId !== CHAIN_ID) {
       await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: NET.chainHex }] });
@@ -433,6 +433,12 @@ document.getElementById("connectBtn").onclick = async () => {
 document.getElementById("mintBtn").onclick = async () => {
   const n = parseInt(document.getElementById("count").value, 10);
   try {
+    if (!signer) { log("Connect your wallet first."); return; }
+    const chainId = await signer.getChainId();
+    if (chainId !== CHAIN_ID) {
+      log("Wrong network — switching to Base…");
+      await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: NET.chainHex }] });
+    }
     const fee = await fire.MINT_FEE();
     log("Minting " + n + " FireUn…");
     const tx = await fire.connect(signer).mint(n, { value: fee.mul(n) });
