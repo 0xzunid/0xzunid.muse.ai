@@ -60,7 +60,7 @@ Our own ENS — **ZunidNameService**. Names `0xzunid`, `zunid`, `muse` live on t
 - Showcase (mirrors OpenSea): https://0xzunid.github.io/8888LLT — OpenSea: https://opensea.io/collection/8888luckylotteryticket-298199102
 - Token `0x19C121C501caAA0DAd3E4dEf5632F3F1C5055531` · Pool `0x8C0D0E74D7e5b7b176Ee8f48e1C7660c2762CA3E` · Source + metadata: [`lt8888arc/`](lt8888arc/)
 
-**FireUn** — the same design on **Base mainnet**, free mint + 0.0001 ETH fee. Token `0xa5F10378A83eB65204e72593776a2dAe13d9B3f1` · Showcase: https://0xzunid.github.io/fireun/showcase.html · OpenSea: https://opensea.io/collection/fireun
+**FireUn** — the same design on **Base mainnet**, free mint + 0.0001 ETH fee. Token `0xa5F10378A83eB65204e72593776a2dAe13d9B3f1` · Showcase: https://0xzunid.github.io/0xzunid.muse.ai/fireun/showcase.html · OpenSea: https://opensea.io/collection/fireun
 
 ## npm package
 
