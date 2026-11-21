@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FireUn — 8888 Lottery Mint | 0xzunid.muse</title>
+<title>FireUn v2 — 8888 Lottery Mint | 0xzunid.muse</title>
 <style>
   :root { --lime: #b8f53d; --lime2: #7ee081; --orange: #ff7a1a; --bg: #0b0b12; --card: #15151f; --line: #26263a; --text: #f2f2f7; --muted: #9a9ab0; }
   * { box-sizing: border-box; }
@@ -15,7 +15,11 @@
   .hero .cap { padding: 12px 16px; color: var(--muted); font-size: 14px; flex: 1; }
   h1 { font-size: 28px; margin: 18px 0 4px; }
   h1 .grad { background: linear-gradient(90deg, var(--lime), var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .tag { color: var(--muted); margin: 0 0 16px; }
+  .tag { color: var(--muted); margin: 0 0 16px; line-height: 1.55; }
+  .banner { border-radius: 12px; padding: 10px 14px; font-size: 14px; font-weight: 700; margin-top: 14px; }
+  .banner.test { background: #2a1a00; color: #ffcf5c; border: 1px solid #8a6d00; }
+  .banner.live { background: #0f2a12; color: #8df59a; border: 1px solid #2f7a3a; }
+  .banner.warn { background: #2a0f0f; color: #ff9a9a; border: 1px solid #7a2f2f; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; margin-top: 14px; }
   .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .stat { background: #0e0e17; border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
@@ -25,35 +29,51 @@
   button { background: linear-gradient(90deg, var(--lime), var(--lime2)); color: #0b0b12; border: 0; border-radius: 999px; padding: 12px 22px; font-weight: 700; font-size: 15px; cursor: pointer; }
   button:disabled { opacity: .45; cursor: default; }
   button.ghost { background: transparent; color: var(--lime); border: 1px solid var(--lime); }
+  button.small { padding: 8px 14px; font-size: 13px; }
   select, input[type=number] { background: #0e0e17; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 15px; }
   .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
   .gold { background: #3a2f00; color: #ffd94d; border: 1px solid #8a6d00; }
   .ember { background: #33150a; color: #ff9a4d; border: 1px solid #8a3d00; }
+  .spark { background: #141033; color: #b7a6ff; border: 1px solid #5a48c8; }
   .plain { background: #1c1c2a; color: var(--muted); border: 1px solid var(--line); }
-  .tok { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .div { background: #0f2a12; color: #8df59a; border: 1px solid #2f7a3a; }
+  .edition { background: #1c1c2a; color: var(--lime); border: 1px solid var(--line); }
+  .tok { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--line); }
   .tok:last-child { border-bottom: 0; }
+  .tok img.portrait { width: 72px; height: 72px; border-radius: 12px; flex-shrink: 0; border: 1px solid var(--line); }
+  .tok .info { flex: 1; min-width: 0; }
+  .tok .traits { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.6; }
   .mono { font-family: ui-monospace, monospace; font-size: 12px; word-break: break-all; color: var(--muted); }
   #log { white-space: pre-wrap; font-size: 13px; color: var(--muted); }
   a { color: var(--lime); }
-  .foot { color: var(--muted); font-size: 13px; margin: 24px 0 8px; text-align: center; }
+  .foot { color: var(--muted); font-size: 13px; margin: 24px 0 8px; text-align: center; line-height: 1.6; }
   .winners { columns: 2; font-size: 14px; }
   .winners div { break-inside: avoid; padding: 2px 0; }
   details summary { cursor: pointer; color: var(--lime); font-weight: 600; padding: 8px 0; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 </head>
 <body>
 <div class="wrap">
   <header><img src="fireun-logo-d.gif" alt="8888 FireUn"></header>
-  <h1>FireUn <span class="grad">8888</span></h1>
-  <p class="tag">The ember unicorn. 8,888 lottery-ticket NFTs on Base Sepolia — free mint + 0.0001 ETH fee. 88 winning tickets: <b>8 GOLDEN</b> + <b>80 EMBER</b>. Winners were committed by hash before mint opened. No seed — the prize grows from fees only.</p>
+  <h1>FireUn <span class="grad">8888</span> <span style="font-size:16px;color:var(--muted)">v2</span></h1>
+  <p class="tag">The ember unicorn. 8,888 lottery-ticket NFTs — free mint + 0.0001 ETH fee.
+    <b>Every round, 888 winners: 8 GOLDEN + 80 EMBER + 800 SPARK</b> — and every other
+    ticket earns a <b>dividend</b> from the same round's pool. No losing tickets: every
+    ticket always has claimable value, every round, forever. Winner lists are committed
+    by hash before each reveal, so no draw can be rigged after the fact. Every ticket
+    has its own unique art — no two are ever the same.</p>
 
-  <div class="hero"><img src="fireun-logo-a.gif" alt="FireUn — the ember unicorn"><div class="cap">Every FireUn is a lottery ticket. If yours is golden or ember, claim your share from your ticket's own vault.</div></div>
+  <div id="netBanner" class="banner live">LIVE — Base mainnet. Minting costs real ETH (0.0001 ETH per ticket).</div>
+  <div id="deployBanner" class="banner warn" style="display:none">v2 contracts not deployed yet — addresses are placeholders. Minting and claims are disabled.</div>
+
+  <div class="hero"><img src="fireun-logo-a.gif" alt="FireUn — the ember unicorn"><div class="cap">Every FireUn is a lottery ticket that never dies. Win a tiered prize, or collect your dividend — every round, forever.</div></div>
 
   <div class="card">
     <div class="row" style="justify-content:space-between">
       <button id="connectBtn">Connect wallet</button>
-      <span id="netInfo" class="mono">Base Sepolia (84532)</span>
+      <span id="netInfo" class="mono"></span>
     </div>
     <div id="acct" class="mono" style="margin-top:8px"></div>
   </div>
@@ -62,59 +82,128 @@
     <div class="stats">
       <div class="stat"><b id="minted">…</b><span>Minted / 8,888</span></div>
       <div class="stat"><b id="poolBal">…</b><span>Prize pool (ETH)</span></div>
-      <div class="stat"><b>0.0001 ETH</b><span>Fee per mint</span></div>
-      <div class="stat"><b id="revealState">…</b><span>Winners</span></div>
+      <div class="stat"><b id="roundInfo">…</b><span>Current round</span></div>
+      <div class="stat"><b id="revealState">…</b><span>Round status</span></div>
     </div>
     <div class="row" style="margin-top:14px">
       <label for="count">Mint</label>
       <select id="count"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option></select>
-      <span>per wallet max 5</span>
+      <span>per wallet max 5 · 0.0001 ETH each</span>
       <button id="mintBtn" disabled>Mint</button>
     </div>
     <p class="mono" id="mintInfo"></p>
   </div>
 
+  <div class="card" id="roundCard" style="display:none">
+    <h3 style="margin-top:0">Round <span id="roundNum">1</span> — pool split</h3>
+    <div class="stats">
+      <div class="stat"><b id="winnerPool">…</b><span>Winners pool (70%)</span></div>
+      <div class="stat"><b id="dividendPool">…</b><span>Dividends pool (30%)</span></div>
+      <div class="stat"><b id="claimDeadline">…</b><span>Claim until</span></div>
+      <div class="stat"><b id="claimedCounts">…</b><span>Claimed (winners / dividends)</span></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <label for="roundSel">View round</label>
+      <select id="roundSel"></select>
+    </div>
+  </div>
+
   <div class="card" id="myCard" style="display:none">
     <h3 style="margin-top:0">My FireUn tickets</h3>
+    <p style="color:var(--muted);font-size:13px;margin:0 0 8px">Showing round <span id="myRoundLabel">1</span>. Portraits load from each ticket's own metadata.</p>
     <div id="myTokens"></div>
   </div>
 
   <div class="card" id="winCard" style="display:none">
-    <h3 style="margin-top:0">Winners <img src="fireun-logo-c.gif" alt="" style="height:28px;vertical-align:-6px;border-radius:8px"></h3>
-    <p><span class="pill gold">GOLDEN × 8</span> — each wins 8/144 of the pool</p>
+    <h3 style="margin-top:0">Winners — round <span id="winRoundLabel">1</span> <img src="fireun-logo-c.gif" alt="" style="height:28px;vertical-align:-6px;border-radius:8px"></h3>
+    <p><span class="pill gold">GOLDEN × 8</span> — each wins 80/2240 of the winners pool</p>
     <div class="winners" id="goldenList"></div>
-    <p><span class="pill ember">EMBER × 80</span> — each wins 1/144 of the pool</p>
+    <p><span class="pill ember">EMBER × 80</span> — each wins 10/2240 of the winners pool</p>
     <details>
-      <summary>Show all 88 winning tickets</summary>
+      <summary>Show all 80 ember tickets</summary>
       <div class="winners" id="emberList"></div>
     </details>
+    <p><span class="pill spark">SPARK × 800</span> — each wins 1/2240 of the winners pool</p>
+    <details>
+      <summary>Show all 800 spark tickets</summary>
+      <div class="winners" id="sparkList"></div>
+    </details>
+    <p style="color:var(--muted);font-size:13px">The other <b id="nonWinnerCount">…</b> minted tickets each claim an equal dividend from the dividends pool. Winner lists are read from the on-chain reveal event.</p>
   </div>
 
   <div class="card">
     <h3 style="margin-top:0">How it works</h3>
-    <p style="color:var(--muted);font-size:14px;line-height:1.6;margin:0">
+    <p style="color:var(--muted);font-size:14px;line-height:1.7;margin:0">
       1. Mint up to 5 FireUn (0.0001 ETH each). 88.88% of the fee goes to the deployer, 11.12% to the prize pool.<br>
-      2. The 88 winning token IDs were committed by hash on-chain before mint opened — the draw can't be rigged after the fact.<br>
-      3. After the reveal, winners claim their share. The prize is paid into the winning ticket's own vault (its ERC-6551 token-bound account), and the ticket owner withdraws it from there.<br>
-      4. Testnet only — Base Sepolia. No real money.
+      2. Each round's 888 winning token IDs are committed by hash on-chain before the reveal — the draw can't be rigged after the fact.<br>
+      3. After the reveal, winners claim their tier share and every other ticket claims its dividend. Both pay into the ticket's own vault (its ERC-6551 token-bound account); the ticket owner withdraws from there.<br>
+      4. Claim window is 90 days per round. Unclaimed prizes stay in the pool and fund the next round — nothing is ever lost.<br>
+      5. Rounds repeat forever, funded by the 5% resale royalties — split 50/50 between the deployer and the prize pool.<br>
+      6. Art rarity is cosmetic only: every ticket has identical lottery odds, whatever its portrait looks like.
     </p>
     <p class="mono" id="addrs"></p>
   </div>
 
   <div class="card"><div id="log">Ready.</div></div>
-  <p class="foot">0xzunid.muse — zunid + muse, build · FireUn lottery drop · testnet</p>
+  <p class="foot">0xzunid.muse — zunid + muse, build · FireUn perpetual lottery · <span id="footNet">Base mainnet</span><br>
+  A modest fun drop. No income promises. Paid-entry lotteries are gambling — check your local rules.</p>
 </div>
 
 <script>
-// ---- Fill these in after deploy (Base Sepolia) ----
-const FIREUN = "0x6Cc53a0FFaBe087c090B46fF79f27b267807d238";
-const PRIZEPOOL = "0x1275911D5AAD33Fd2bb46b9a22D4D05eB910A9f7";
-const REGISTRY = "0x942Fc4530335d7658eBfbAFF735e0c34102907fD";
-const ACCOUNT_IMPL = "0xc715227626E2855c7bA642bA582bf6A3531AD2D3";
-const CHAIN_ID = 84532;
-const RPC = "https://sepolia.base.org";
-const EXPLORER = "https://sepolia.basescan.org";
-// ----------------------------------------------------
+// =====================================================================
+// FIREUN v2 — CONFIG. Fill in addresses after each deploy.
+// Sepolia (test): V2_SEPOLIA_* filled from the Sepolia E2E deploy (Fix A).
+// Mainnet: V2_MAINNET_* FILLED 2026-11-21 ~06:33 GMT+7 — live Base mainnet
+// deploy (6 txs, all status 1). ACTIVE_NETWORK flipped to "mainnet".
+// =====================================================================
+const ACTIVE_NETWORK = "mainnet"; // "sepolia" | "mainnet"
+
+const NETWORKS = {
+  sepolia: {
+    label: "Base Sepolia (84532)",
+    chainId: 84532,
+    chainHex: "0x14a34",
+    rpc: "https://sepolia.base.org",
+    explorer: "https://sepolia.basescan.org",
+    isTestnet: true,
+    // ---- FILLED 2026-11-21 06:23 GMT+7 — Fix A E2E deploy (59/59 tests, reveal 5,783,414 gas) ----
+    FIREUN: "0xf65437682eD9a1d8414206203738D203e1bd9Ac4",        // V2_SEPOLIA_FIREUN (Fix A)
+    PRIZEPOOL: "0xa76069EF9EC111B3CbFC38501A3fe32122b71242",     // V2_SEPOLIA_PRIZEPOOLV2 (Fix A)
+    SPLITTER: "0x6f8710d108Fe66bAD7839F56D07b8eC2DCA931b1",      // V2_SEPOLIA_ROYALTYSPLITTER (Fix A)
+    REGISTRY: "0x942Fc4530335d7658eBfbAFF735e0c34102907fD",        // ERC-6551 registry (v1 Sepolia deploy — CONFIRM REUSE in E2E; replace if the E2E redeploys it)
+    ACCOUNT_IMPL: "0xc715227626E2855c7bA642bA582bf6A3531AD2D3"     // ERC-6551 account impl (v1 Sepolia deploy — CONFIRM REUSE in E2E; replace if the E2E redeploys it)
+  },
+  mainnet: {
+    label: "Base (8453)",
+    chainId: 8453,
+    chainHex: "0x2105",
+    rpc: "https://mainnet.base.org",
+    explorer: "https://basescan.org",
+    isTestnet: false,
+    // ---- FILLED 2026-11-21 ~06:33 GMT+7 — Base mainnet deploy (6 txs, all status 1) ----
+    FIREUN: "0xa5F10378A83eB65204e72593776a2dAe13d9B3f1",        // V2_MAINNET_FIREUN
+    PRIZEPOOL: "0x1275911D5AAD33Fd2bb46b9a22D4D05eB910A9f7",     // V2_MAINNET_PRIZEPOOLV2
+    SPLITTER: "0x6Cc53a0FFaBe087c090B46fF79f27b267807d238",      // V2_MAINNET_ROYALTYSPLITTER
+    REGISTRY: "0x000000006551c19487814612e58FE06813775758",        // V2_MAINNET_REGISTRY — canonical ERC-6551 registry (reused, already live on Base)
+    ACCOUNT_IMPL: "0xc715227626E2855c7bA642bA582bf6A3531AD2D3"     // V2_MAINNET_ACCOUNT_IMPL — fresh deploy 2026-11-21
+  }
+};
+// Canonical per-token metadata baseURI (v2 FireUn constructor arg).
+// tokenURI = METADATA_BASE + tokenId + ".json"
+const METADATA_BASE = "https://0xzunid.github.io/0xzunid.muse.ai/fireun/metadata/";
+// =====================================================================
+
+const NET = NETWORKS[ACTIVE_NETWORK];
+const CHAIN_ID = NET.chainId;
+const RPC = NET.rpc;
+const EXPLORER = NET.explorer;
+const FIREUN = NET.FIREUN;
+const PRIZEPOOL = NET.PRIZEPOOL;
+const SPLITTER = NET.SPLITTER;
+const REGISTRY = NET.REGISTRY;
+const ACCOUNT_IMPL = NET.ACCOUNT_IMPL;
+const ZERO = "0x0000000000000000000000000000000000000000";
+const DEPLOYED = FIREUN !== ZERO && PRIZEPOOL !== ZERO;
 
 const FIREUN_ABI = [
   "function totalSupply() view returns (uint256)",
@@ -124,49 +213,135 @@ const FIREUN_ABI = [
   "function balanceOf(address) view returns (uint256)",
   "function tokenOfOwnerById(address,uint256) view returns (uint256)",
   "function mintedPerWallet(address) view returns (uint256)",
-  "function winnersRevealed() view returns (bool)",
-  "function isGolden(uint256) view returns (bool)",
-  "function isEmber(uint256) view returns (bool)",
-  "function getGoldenWinners() view returns (uint256[])",
-  "function getEmberWinners() view returns (uint256[])",
-  "function tokenURI(uint256) view returns (string)"
+  "function roundCommitment(uint256) view returns (bytes32)",
+  "function roundRevealed(uint256) view returns (bool)",
+  "function tierOf(uint256,uint256) view returns (uint8)",
+  "function tokenURI(uint256) view returns (string)",
+  "function royaltyReceiver() view returns (address)",
+  "function feeRecipient() view returns (address)",
+  "function prizePool() view returns (address)",
+  "event RoundRevealed(uint256 indexed roundId, uint256[] golden, uint256[] ember, uint256[] spark)"
 ];
 const POOL_ABI = [
-  "function claim(uint256 tokenId)",
-  "function claimed(uint256) view returns (bool)",
-  "function shareFor(uint256) view returns (uint256)",
-  "function tokenBoundAccount(uint256) view returns (address)",
-  "function snapshotBalance() view returns (uint256)",
-  "function claimedCount() view returns (uint256)"
+  "function rounds(uint256) view returns (uint256 winnerPool, uint256 dividendPool, uint256 nonWinnerCount, uint256 revealTime, uint256 claimDeadline, bool snapshotTaken)",
+  "function claim(uint256 roundId, uint256 tokenId)",
+  "function claimDividend(uint256 roundId, uint256 tokenId)",
+  "function claimed(uint256,uint256) view returns (bool)",
+  "function dividendClaimed(uint256,uint256) view returns (bool)",
+  "function claimedCount(uint256) view returns (uint256)",
+  "function dividendClaimedCount(uint256) view returns (uint256)",
+  "function shareFor(uint256 roundId, uint256 tokenId) view returns (uint256)",
+  "function dividendFor(uint256 roundId, uint256 tokenId) view returns (uint256)",
+  "function tokenBoundAccount(uint256) view returns (address)"
 ];
 const TBA_ABI = ["function execute(address to, uint256 value, bytes data, uint8 operation) payable returns (bytes)"];
 
+const TIER_NAME = { 0: "ticket", 1: "GOLDEN", 2: "EMBER", 3: "SPARK" };
+const TIER_PILL = { 0: "plain", 1: "gold", 2: "ember", 3: "spark" };
+
 const logEl = document.getElementById("log");
 function log(m) { logEl.textContent = m; }
-const provider = new ethers.providers.JsonRpcProvider(RPC);
-const fire = new ethers.Contract(FIREUN, FIREUN_ABI, provider);
-const pool = new ethers.Contract(PRIZEPOOL, POOL_ABI, provider);
-let signer = null, account = null;
 
+document.getElementById("netInfo").textContent = NET.label;
+document.getElementById("footNet").textContent = NET.isTestnet ? "Base Sepolia testnet" : "Base mainnet";
+if (!NET.isTestnet) {
+  const b = document.getElementById("netBanner");
+  b.className = "banner live";
+  b.textContent = "LIVE — Base mainnet. Minting costs real ETH (0.0001 ETH per ticket).";
+}
+if (!DEPLOYED) document.getElementById("deployBanner").style.display = "block";
 document.getElementById("addrs").textContent =
-  "FireUn: " + FIREUN + "\nPrizePool: " + PRIZEPOOL + "\nRegistry: " + REGISTRY + "\nAccount impl: " + ACCOUNT_IMPL;
+  "FireUn: " + FIREUN + "\nPrizePoolV2: " + PRIZEPOOL + "\nRoyaltySplitter: " + SPLITTER +
+  "\nRegistry: " + REGISTRY + "\nAccount impl: " + ACCOUNT_IMPL +
+  "\nMetadata: " + METADATA_BASE;
+
+const provider = new ethers.providers.JsonRpcProvider(RPC);
+const fire = DEPLOYED ? new ethers.Contract(FIREUN, FIREUN_ABI, provider) : null;
+const pool = DEPLOYED ? new ethers.Contract(PRIZEPOOL, POOL_ABI, provider) : null;
+let signer = null, account = null;
+let revealedRounds = [];   // roundIds with snapshotTaken, ascending
+let selectedRound = 0;     // roundId shown in My tickets / Winners
+
+// Probe rounds 1..10: a round exists once its commitment is set or it is revealed.
+async function probeRounds() {
+  revealedRounds = [];
+  for (let r = 1; r <= 10; r++) {
+    const [commitment, revealed] = await Promise.all([fire.roundCommitment(r), fire.roundRevealed(r)]);
+    if (commitment === ethers.constants.HashZero && !revealed) break;
+    const rd = await pool.rounds(r);
+    if (rd.snapshotTaken) revealedRounds.push(r);
+  }
+  selectedRound = revealedRounds.length ? revealedRounds[revealedRounds.length - 1] : 0;
+}
 
 async function refresh() {
+  if (!DEPLOYED) { log("v2 contracts not deployed yet on this network — addresses are placeholders."); return; }
   try {
-    const [supply, poolBal, revealed] = await Promise.all([
-      fire.totalSupply(), provider.getBalance(PRIZEPOOL), fire.winnersRevealed()
-    ]);
+    const [supply, poolBal] = await Promise.all([fire.totalSupply(), provider.getBalance(PRIZEPOOL)]);
     document.getElementById("minted").textContent = supply.toString() + " / 8,888";
     document.getElementById("poolBal").textContent = ethers.utils.formatEther(poolBal);
-    document.getElementById("revealState").textContent = revealed ? "Revealed" : "Not yet revealed";
-    if (revealed) {
-      document.getElementById("winCard").style.display = "block";
-      const [g, e] = await Promise.all([fire.getGoldenWinners(), fire.getEmberWinners()]);
-      document.getElementById("goldenList").innerHTML = g.map(x => "<div>#" + x + "</div>").join("");
-      document.getElementById("emberList").innerHTML = e.map(x => "<div>#" + x + "</div>").join("");
+    await probeRounds();
+    if (revealedRounds.length) {
+      document.getElementById("roundInfo").textContent = "Round " + revealedRounds[revealedRounds.length - 1] + " of " + revealedRounds.length;
+      document.getElementById("revealState").textContent = "Revealed — claims open";
+      document.getElementById("roundCard").style.display = "block";
+      const sel = document.getElementById("roundSel");
+      sel.innerHTML = revealedRounds.map(r => "<option value='" + r + "'" + (r === selectedRound ? " selected" : "") + ">Round " + r + "</option>").join("");
+      await refreshRound();
+    } else {
+      document.getElementById("roundInfo").textContent = "Round 1 pending";
+      document.getElementById("revealState").textContent = "Not yet revealed";
     }
     if (account) await refreshMine();
   } catch (err) { log("Stats error: " + (err.message || err)); }
+}
+
+async function refreshRound() {
+  const r = selectedRound;
+  document.getElementById("roundNum").textContent = r;
+  document.getElementById("myRoundLabel").textContent = r;
+  document.getElementById("winRoundLabel").textContent = r;
+  const rd = await pool.rounds(r);
+  document.getElementById("winnerPool").textContent = ethers.utils.formatEther(rd.winnerPool);
+  document.getElementById("dividendPool").textContent = ethers.utils.formatEther(rd.dividendPool);
+  const dl = new Date(rd.claimDeadline.toNumber() * 1000);
+  const daysLeft = Math.max(0, Math.ceil((rd.claimDeadline.toNumber() * 1000 - Date.now()) / 86400000));
+  document.getElementById("claimDeadline").textContent = dl.toISOString().slice(0, 10) + " (" + daysLeft + "d left)";
+  const [cc, dc] = await Promise.all([pool.claimedCount(r), pool.dividendClaimedCount(r)]);
+  document.getElementById("claimedCounts").textContent = cc.toString() + " / " + dc.toString();
+  document.getElementById("nonWinnerCount").textContent = rd.nonWinnerCount.toString();
+  // Winner lists live ONLY in the RoundRevealed event — no on-chain getter.
+  try {
+    const evs = await fire.queryFilter(fire.filters.RoundRevealed(r));
+    if (evs.length) {
+      const ev = evs[evs.length - 1];
+      document.getElementById("winCard").style.display = "block";
+      document.getElementById("goldenList").innerHTML = ev.args.golden.map(x => "<div>#" + x + "</div>").join("");
+      document.getElementById("emberList").innerHTML = ev.args.ember.map(x => "<div>#" + x + "</div>").join("");
+      document.getElementById("sparkList").innerHTML = ev.args.spark.map(x => "<div>#" + x + "</div>").join("");
+    } else {
+      log("Round " + r + " revealed, but the reveal event was not found via this RPC — check Basescan.");
+    }
+  } catch (err) { log("Winner-list lookup failed: " + (err.message || err)); }
+}
+
+async function fetchMeta(id) {
+  try {
+    const uri = await fire.tokenURI(id);
+    const res = await fetch(uri);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (e) { return null; }
+}
+
+function traitPills(meta) {
+  if (!meta || !meta.attributes) return "";
+  const get = t => (meta.attributes.find(a => a.trait_type === t) || {}).value || "";
+  const ed = get("Edition");
+  return "<div class='traits'>" +
+    (ed ? "<span class='pill edition'>" + ed + "</span> " : "") +
+    [ "Background", "Unicorn", "Flame", "Accessory" ].map(t => get(t)).filter(Boolean).join(" · ") +
+    "</div>";
 }
 
 async function refreshMine() {
@@ -174,25 +349,49 @@ async function refreshMine() {
   const bal = await fire.balanceOf(account);
   document.getElementById("myCard").style.display = bal.gt(0) ? "block" : "none";
   box.innerHTML = "";
+  if (!selectedRound) { box.innerHTML = "<p style='color:var(--muted)'>No round revealed yet — claims open after the first reveal.</p>"; return; }
   for (let i = 0; i < bal.toNumber(); i++) {
     const id = await fire.tokenOfOwnerById(account, i);
-    const [g, e, claimed, share, tba] = await Promise.all([
-      fire.isGolden(id), fire.isEmber(id), pool.claimed(id), pool.shareFor(id), pool.tokenBoundAccount(id)
+    const [tier, share, div, isClaimed, isDivClaimed, tba] = await Promise.all([
+      fire.tierOf(selectedRound, id),
+      pool.shareFor(selectedRound, id),
+      pool.dividendFor(selectedRound, id),
+      pool.claimed(selectedRound, id),
+      pool.dividendClaimed(selectedRound, id),
+      pool.tokenBoundAccount(id)
     ]);
+    const meta = await fetchMeta(id);
     const row = document.createElement("div");
     row.className = "tok";
-    const tier = g ? '<span class="pill gold">GOLDEN</span>' : e ? '<span class="pill ember">EMBER</span>' : '<span class="pill plain">ticket</span>';
-    let action = "";
-    if (g || e) {
-      if (claimed) action = '<button class="ghost" data-wd="' + id + '">Withdraw from vault</button>';
-      else action = '<button data-claim="' + id + '">Claim ' + ethers.utils.formatEther(share) + ' ETH</button>';
+    const tierPill = tier > 0
+      ? '<span class="pill ' + TIER_PILL[tier] + '">' + TIER_NAME[tier] + '</span>'
+      : '<span class="pill div">dividend</span>';
+    let actions = "";
+    if (tier > 0) {
+      if (isClaimed) actions = '<button class="ghost small" data-wd="' + id + '">Withdraw from vault</button>';
+      else actions = '<button class="small" data-claim="' + id + '">Claim ' + ethers.utils.formatEther(share) + ' ETH</button>';
+    } else {
+      if (isDivClaimed) actions = '<button class="ghost small" data-wd="' + id + '">Withdraw from vault</button>';
+      else if (div.gt(0)) actions = '<button class="small" data-div="' + id + '">Claim dividend ' + ethers.utils.formatEther(div) + ' ETH</button>';
     }
-    row.innerHTML = "<span><b>#" + id + "</b> " + tier + "<br><span class='mono'>vault " + tba + "</span></span><span>" + action + "</span>";
+    const img = meta && meta.image ? '<img class="portrait" src="' + meta.image + '" alt="FireUn #' + id + '">' : "";
+    const metaNote = meta ? "" : "<div class='traits'>Portrait not hosted yet — appears once metadata is on GitHub Pages.</div>";
+    row.innerHTML = img + "<div class='info'><b>#" + id + "</b> " + tierPill +
+      traitPills(meta) + metaNote +
+      "<div class='mono'>vault " + tba + "</div><div class='actions'>" + actions + "</div></div>";
     box.appendChild(row);
   }
   box.querySelectorAll("[data-claim]").forEach(b => b.onclick = async () => {
-    try { log("Claiming #" + b.dataset.claim + "…"); const tx = await pool.connect(signer).claim(b.dataset.claim); log("Claim tx: " + tx.hash); await tx.wait(); log("Claimed #" + b.dataset.claim + " into its vault."); await refresh(); }
+    try { log("Claiming winner share for #" + b.dataset.claim + " (round " + selectedRound + ")…");
+      const tx = await pool.connect(signer).claim(selectedRound, b.dataset.claim);
+      log("Claim tx: " + tx.hash); await tx.wait(); log("Claimed #" + b.dataset.claim + " into its vault."); await refresh(); }
     catch (err) { log("Claim failed: " + (err.message || err)); }
+  });
+  box.querySelectorAll("[data-div]").forEach(b => b.onclick = async () => {
+    try { log("Claiming dividend for #" + b.dataset.div + " (round " + selectedRound + ")…");
+      const tx = await pool.connect(signer).claimDividend(selectedRound, b.dataset.div);
+      log("Dividend tx: " + tx.hash); await tx.wait(); log("Dividend claimed for #" + b.dataset.div + "."); await refresh(); }
+    catch (err) { log("Dividend claim failed: " + (err.message || err)); }
   });
   box.querySelectorAll("[data-wd]").forEach(b => b.onclick = async () => {
     try {
@@ -207,6 +406,12 @@ async function refreshMine() {
   });
 }
 
+document.getElementById("roundSel").onchange = async (e) => {
+  selectedRound = parseInt(e.target.value, 10);
+  await refreshRound();
+  if (account) await refreshMine();
+};
+
 document.getElementById("connectBtn").onclick = async () => {
   if (!window.ethereum) { log("No wallet found. Install MetaMask."); return; }
   try {
@@ -214,12 +419,12 @@ document.getElementById("connectBtn").onclick = async () => {
     const wp = new ethers.providers.Web3Provider(window.ethereum);
     const net = await wp.getNetwork();
     if (net.chainId !== CHAIN_ID) {
-      await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: "0x14a34" }] });
+      await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: NET.chainHex }] });
     }
     signer = wp.getSigner();
     account = await signer.getAddress();
     document.getElementById("acct").textContent = "Connected: " + account;
-    document.getElementById("mintBtn").disabled = false;
+    document.getElementById("mintBtn").disabled = !DEPLOYED;
     log("Connected as " + account);
     await refresh();
   } catch (err) { log("Connect failed: " + (err.message || err)); }
@@ -232,7 +437,7 @@ document.getElementById("mintBtn").onclick = async () => {
     log("Minting " + n + " FireUn…");
     const tx = await fire.connect(signer).mint(n, { value: fee.mul(n) });
     log("Mint tx: " + tx.hash + " — waiting…");
-    const rc = await tx.wait();
+    await tx.wait();
     log("Minted! Tx " + EXPLORER + "/tx/" + tx.hash);
     document.getElementById("mintInfo").textContent = "Tx: " + tx.hash;
     await refresh();
