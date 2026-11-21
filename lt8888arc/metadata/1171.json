@@ -1,6 +1,6 @@
 {
   "name": "8888LuckyLotteryTicket #1171",
-  "description": "8888LuckyLotteryTicket \u2014 a free-mint lottery ticket on Arc. 8,888 tickets enter every round: 888 winners (8 golden, 80 ember, 800 spark) share 70% of the prize pool, and every other ticket claims an equal dividend from the remaining 30%. Perpetual rounds, 90-day claim windows. Winners are committed by hash before each reveal. Art: Lucky Lottery 8888.",
+  "description": "8888LuckyLotteryTicket \u2014 a lottery ticket on Arc. Mint price 0.08888 USDC. 8,888 tickets enter every round: 888 winners (8 golden, 80 ember, 800 spark) share 70% of the prize pool, and every other ticket claims an equal dividend from the remaining 30%. Perpetual rounds, 90-day claim windows. Winners are committed by hash before each reveal. Art: Lucky Lottery 8888.",
   "image": "https://0xzunid.github.io/0xzunid.muse.ai/lt8888arc/media/LLT.jpg",
   "animation_url": "https://0xzunid.github.io/0xzunid.muse.ai/lt8888arc/media/lucky-lottery-8888-3d.mp4",
   "attributes": [
