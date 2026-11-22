@@ -2,7 +2,7 @@
 
 **8,888 lottery-ticket NFTs on Arc. Mint price 0.08888 USDC. 888 winners per round — 8 GOLDEN, 80 EMBER, 800 SPARK — share 70% of the prize pool; every other ticket claims an equal dividend from the remaining 30%. Perpetual rounds, 90-day claim windows.**
 
-- **Live mint (OpenSea):** https://opensea.io/collection/8888luckylotteryticket-298199102
+- **Live mint (OpenSea):** https://opensea.io/collection/8888luckylotteryticket
 - **Mirror on this site:** https://0xzunid.github.io/8888LLT
 - **Chain:** Arc mainnet (chain 5042), native USDC (18 decimals)
 - **Deployed:** 2026-11-22 · **First mint:** 2026-11-22 ~04:33 GMT+7 — token #1, by the creator from his phone
