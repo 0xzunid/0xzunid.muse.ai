@@ -87,8 +87,8 @@ h1 .grad { background:linear-gradient(90deg,var(--lime),var(--orange)); -webkit-
   </div>
 
   <section class="hero">
-    <video class="hero-art" autoplay muted loop playsinline poster="../lt8888arc/media/LLT.jpg">
-      <source src="../lt8888arc/media/lucky-lottery-8888-3d.mp4" type="video/mp4">
+    <video class="hero-art" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="../lt8888arc/media/LLT.jpg">
+      <source src="../lt8888arc/media/lucky-lottery-8888-3d-hero.mp4" type="video/mp4">
       <img class="hero-art" src="../lt8888arc/media/LLT.jpg" alt="Lucky Lottery 8888">
     </video>
     <div class="hero-sale">
@@ -131,6 +131,17 @@ h1 .grad { background:linear-gradient(90deg,var(--lime),var(--orange)); -webkit-
 </div>
 <script>
 "use strict";
+// Hero video: force autoplay — some mobile browsers ignore the autoplay
+// attribute, so call play() as soon as the video can play, and retry.
+(function () {
+  const v = document.getElementById("heroVideo");
+  if (!v) return;
+  const tryPlay = () => { const p = v.play(); if (p) p.catch(() => {}); };
+  v.addEventListener("loadeddata", tryPlay);
+  v.addEventListener("canplay", tryPlay);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && v.paused) tryPlay(); });
+  setTimeout(tryPlay, 1500);
+})();
 const TOTAL = 8888, PAGE = 24;
 const CONTRACT = "0x19C121C501caAA0DAd3E4dEf5632F3F1C5055531";
 const POOL = "0x8C0D0E74D7e5b7b176Ee8f48e1C7660c2762CA3E";
